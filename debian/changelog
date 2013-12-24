@@ -1,3 +1,9 @@
+libusb (2:0.1.12-20pexip1) pexip; urgency=low
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 24 Dec 2013 22:17:39 +0000
+
 libusb (2:0.1.12-20) unstable; urgency=low
 
   * Add symbols files.
