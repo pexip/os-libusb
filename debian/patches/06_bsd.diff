@@ -1,6 +1,8 @@
---- a/bsd.c
-+++ b/bsd.c
-@@ -39,7 +39,7 @@
+Index: libusb-0.1.12/bsd.c
+===================================================================
+--- libusb-0.1.12.orig/bsd.c	2012-09-22 12:28:40.000000000 +0000
++++ libusb-0.1.12/bsd.c	2012-09-22 12:35:17.000000000 +0000
+@@ -39,14 +39,22 @@
  #include <sys/time.h>
  #include <sys/ioctl.h>
  
@@ -9,8 +11,26 @@
  
  #include "usbi.h"
  #ifdef HAVE_CONFIG_H
---- /dev/null
-+++ b/freebsd-usb.h
+ #include "config.h"
+ #endif
+ 
+-#ifdef HAVE_OLD_DEV_USB_USB_H
++/*
++ * Since the Debian version includes "freebsd-usb.h" instead of
++ * <dev/usb/usb.h>, the API provided by the latter file does not matter. The
++ * configure check gives false positives as of 2012, but rather than fixing a
++ * check for something we don't use anyway, just unconditionally skip those
++ * definitions.
++ * #ifdef HAVE_OLD_DEV_USB_USB_H
++ */
++#if 0
+ /*
+  * It appears some of the BSD's (OpenBSD atleast) have switched over to a
+  * new naming convention, so we setup some macro's for backward
+Index: libusb-0.1.12/freebsd-usb.h
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ libusb-0.1.12/freebsd-usb.h	2012-09-22 12:28:40.000000000 +0000
 @@ -0,0 +1,706 @@
 +/*	$NetBSD: usb.h,v 1.69 2002/09/22 23:20:50 augustss Exp $	*/
 +/*	$FreeBSD: src/sys/dev/usb/usb.h,v 1.47.2.1.2.1 2009/04/15 03:14:26 kensmith Exp $    */
