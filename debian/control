@@ -3,11 +3,11 @@ Section: libs
 Priority: optional
 Maintainer: Aurelien Jarno <aurel32@debian.org>
 Build-Depends: debhelper (>= 9), dh-autoreconf, pkg-config, docbook, docbook-dsssl
-Standards-Version: 3.9.8
+Standards-Version: 4.1.4
 Homepage: http://www.linux-usb.org/
 
 Package: libusb-0.1-4
-Priority: important
+Priority: optional
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}

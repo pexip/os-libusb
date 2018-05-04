@@ -10,4 +10,5 @@
 09_dummy.diff
 10_hurd.diff
 11_transfer_timeout.diff
+12_ENAMETOOLONG.diff
 91_ac_prog_cxx.diff
