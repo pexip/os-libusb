@@ -5,7 +5,7 @@ Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Aurelien Jarno <aurel32@debian.org>
 Build-Depends: debhelper (>= 8.1.3), dh-autoreconf, pkg-config, docbook, docbook-dsssl
 Standards-Version: 3.9.6
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: libusb-0.1-4
 Priority: important
