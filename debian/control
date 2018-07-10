@@ -3,63 +3,41 @@ Section: libs
 Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Aurelien Jarno <aurel32@debian.org>
-Build-Depends: debhelper (>= 8.1.3), dh-autoreconf, pkg-config, docbook, docbook-dsssl
-Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9), dh-autoreconf, pkg-config, docbook, docbook-dsssl
+Standards-Version: 3.9.8
+Homepage: http://www.linux-usb.org/
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: libusb-0.1-4
 Priority: important
-Section: libs
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: libusb-dev (<< 2:0.1.12-25)
-Homepage: http://www.linux-usb.org/
 Description: userspace USB programming library
  Library for programming USB applications without the knowledge
  of Linux kernel internals.
+ .
+ This package contains what you need to run programs that use this
+ library.
 
 Package: libusb-dev
 Section: libdevel
 Architecture: any
 Depends: libusb-0.1-4 (= ${binary:Version}), libc6-dev | libc-dev, ${misc:Depends}
-Homepage: http://www.linux-usb.org/
 Description: userspace USB programming library development files
  Library for programming USB applications without the knowledge
  of Linux kernel internals.
-
-Package: libusb++-0.1-4c2
-Section: libs
-Architecture: any
-Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libusb++-0.1-4
-Replaces: libusb++-0.1-4
-Suggests: hotplug
-Homepage: http://www.linux-usb.org/
-Description: userspace C++ USB programming library
- Library for programming USB applications without the knowledge
- of Linux kernel internals. This is only for programs which use 
- the C++ interface.
-
-Package: libusb++-dev
-Section: libdevel
-Architecture: any
-Depends: libusb++-0.1-4c2 (= ${binary:Version}), libusb-dev (= ${binary:Version}), libstdc++6-4.4-dev | libstdc++-dev, ${misc:Depends}
-Homepage: http://www.linux-usb.org/
-Description: userspace C++ USB programming library development files
- Library for programming USB applications without the knowledge
- of Linux kernel internals. This is only for programs which use
- the C++ interface.
+ .
+ This package contains what you need for compiling sources that
+ use this library in your own code.
 
 Package: libusb-0.1-udeb
-XC-Package-Type: udeb
+Package-Type: udeb
 Section: debian-installer
 Architecture: any
 Depends: ${shlibs:Depends}
-Homepage: http://www.linux-usb.org/
 Description: userspace USB programming library
  Library for programming USB applications without the knowledge
  of Linux kernel internals.

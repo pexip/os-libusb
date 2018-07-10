@@ -1,3 +1,47 @@
+libusb (2:0.1.12-30) unstable; urgency=medium
+
+  * Fix call to printf when creating libusb.so (closes: #823525).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Thu, 05 May 2016 19:32:19 +0000
+
+libusb (2:0.1.12-29) unstable; urgency=medium
+
+  * Drop packages providing the C++ library. It is unused in the archive
+    and new developments should use libusb 1.0 instead (closes: #820510).
+  * Use portable shell construct in debian/rules, thanks to Daniel Shahaf for
+    the patch (closes: #823123).
+  * Bump Standards-Version to 3.9.8 (no changes).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sun, 01 May 2016 17:00:14 +0200
+
+libusb (2:0.1.12-28) unstable; urgency=medium
+
+  * Rewrite debian/rules using dh.
+  * debian/control: rename XC-Package-Type into Package-Type.
+  * debian/control: improve descriptions.
+  * debian/copyright: point to LGPL-2 instead of LGPL symlink.
+  * Replace /usr/lib/$triplet/libusb.so by a linker script, in the hope it
+    will make everybody happy (closes: #706278, #763195, #766808).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Fri, 08 Jan 2016 13:56:08 +0100
+
+libusb (2:0.1.12-27) unstable; urgency=medium
+
+  * Upload to unstable. 
+  * Mention in debian/copyright that usb.h.in and/or usb.h may also be 
+    distributed under the BSD license (closes: #794378).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Mon, 03 Aug 2015 16:04:52 +0200
+
+libusb (2:0.1.12-26) experimental; urgency=medium
+
+  * Upload to experimental.
+  * Rename libusb++-0.1-4c2 into libusb++-0.1-4v5 for the GCC 5 ABI transition.
+  * Force C++ standard to c++11 to prepare for the GCC 6 transition.
+  * Build-depends on g++ (>= 4:5.2).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sat, 01 Aug 2015 14:08:15 +0200
+
 libusb (2:0.1.12-25pexip1) pexip; urgency=low
 
   * Migrate to Jessie
@@ -746,6 +790,3 @@ libusb (1:0.1.3b-1) unstable; urgency=low
 
  -- Christopher L Cheney <ccheney@debian.org>  Wed, 13 Jun 2001 12:21:44 -0500
 
-Local variables:
-mode: debian-changelog
-End:
