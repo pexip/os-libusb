@@ -1,3 +1,20 @@
+libusb (2:0.1.12-32) unstable; urgency=medium
+
+  * Update debian/patches/12_ENAMETOOLONG.diff to handle more failures with
+    GCC 8 (closes: #897799).
+  * Downgrade priority to optional following the recent policy change (closes:
+    #893556).
+  * Bump Standards-Version to 4.1.4.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Fri, 04 May 2018 20:07:10 +0000
+
+libusb (2:0.1.12-31) unstable; urgency=medium
+
+  * Add patches/12_ENAMETOOLONG.diff to correctly handle too long filename
+    failures and FTBFS with GCC 7 (closes: #853511).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Wed, 19 Apr 2017 13:50:36 +0000
+
 libusb (2:0.1.12-30pexip1) pexip; urgency=medium
 
   * Migrate to Stretch
