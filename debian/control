@@ -6,7 +6,7 @@ XSBC-Pexip-Original-Maintainer: Aurelien Jarno <aurel32@debian.org>
 Build-Depends: debhelper (>= 9), dh-autoreconf, pkg-config, docbook, docbook-dsssl
 Standards-Version: 4.1.4
 Homepage: http://www.linux-usb.org/
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: libusb-0.1-4
 Priority: optional
